@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
             jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
 
-        // Verifica se html2pdf está definido
         if (typeof html2pdf !== 'undefined') {
+            console.log('html2pdf está definido.');
             html2pdf().from(element).set(opt).save().then(() => {
                 console.log('PDF gerado com sucesso!');
             }).catch(err => {
